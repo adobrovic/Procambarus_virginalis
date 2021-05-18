@@ -30,7 +30,9 @@ filterChecks = k * v_Hp >= f_tL1^3 || ...              % constraint required for
   TC_tCL25 = tempcorr(temp.tCL25, T_ref, pars_T);
   TC_tCL20 = tempcorr(temp.tCL20, T_ref, pars_T);
   TC_tCL15 = tempcorr(temp.tCL15, T_ref, pars_T);
+  TC_tL_control = tempcorr(temp.tL_control, T_ref, pars_T);
   TC_tW = tempcorr(temp.tW, T_ref, pars_T);
+  TC_tWw_control = tempcorr(temp.tWw_control, T_ref, pars_T);
   TC_LN_Vogt = tempcorr(temp.LN_Vogt, T_ref, pars_T);
   TC_LN_HossKoub2019 = tempcorr(temp.LN_HossKoub2019, T_ref, pars_T);
   TC_WN = tempcorr(temp.WN, T_ref, pars_T);
@@ -159,6 +161,19 @@ filterChecks = k * v_Hp >= f_tL1^3 || ...              % constraint required for
   L = L_i - (L_i - L_b) * exp( - rT_B * tW(:,1));           % cm, structural length at time
   EWw = L.^3 * (1 + F * ome);                                 % g, wet weight
  
+ % t-L and t-Ww data for control group in pathogen infection experiment
+ F = f_cont;
+ L_b = L_m * get_lb([g k v_Hb], F); Lw_b = L_b / del_M;
+ Lw_i = L_m * (F - l_T)/ del_M;
+ ir_B = 3/ k_M + 3 * F * L_m/ v; rT_B = TC_tL_control/ ir_B;  % d, 1/von Bert growth rate // % 1/d, von Bert growth rate
+ % tL_control
+ ELw_control = Lw_i - (Lw_i - Lw_b) * exp( - rT_B * tL_control(:,1)); % cm, total length
+ 
+ % tWw_control
+ L = L_i - (L_i - L_b) * exp( - rT_B * tWw_control(:,1));           % cm, structural length at time
+ EWw_control = L.^3 * (1 + F * ome);                                 % g, wet weight
+ 
+ 
  % length-weight
   EWw_Vogt2010 = (LW_Vogt2010(:,1) * del_M).^3 * (1 + f * ome);  % g, wet weight;
   EWw_ParvTogo2017 = (LW_ParvTogo2017(:,1) * del_M).^3 * (1 + f * ome);  % g, wet weight;
@@ -180,11 +195,13 @@ filterChecks = k * v_Hp >= f_tL1^3 || ...              % constraint required for
   prdData.tCL25 = ELw25;
   prdData.tCL20 = ELw20;
   prdData.tCL15 = ELw15;
+  prdData.tL_control = ELw_control;
   prdData.tW = EWw;
   prdData.tWw30 = EWw30;
   prdData.tWw25 = EWw25;
   prdData.tWw20 = EWw20;
   prdData.tWw15 = EWw15;
+  prdData.tWw_control = EWw_control;
   prdData.LW_Vogt2010 = EWw_Vogt2010;
   prdData.LW_ParvTogo2017 = EWw_ParvTogo2017;
   prdData.LW_Ziza2015 = EWw_Ziza2015;

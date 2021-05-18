@@ -125,6 +125,13 @@ data.tCL15 = [ ... % time since birth (days), carapace length (cm)
 units.tCL15 = {'d', 'cm'};  label.tCL15 = {'time since birth', 'carapace length'}; bibkey.tCL15 = 'SeitVilp2005';
 temp.tCL15 = C2K(15);  units.temp.tCL15 = 'K'; label.temp.tCL15 = 'temperature';
 
+% t-TL data for control group in pathogen infection experiment
+data.tL_control = [ ... % time since birth (days), total length (cm)
+ 87     87      87      87      87      87      87      87      87      87      87      87      87      87      87      101     101     101     101     101     101     101     101     101     101     101     101     101     101     101     115     115     115     115     115     115     115     115     115     115     115     115     115     115     115     129     129     129     129     129     129     129     129     129     129     129     129     129     129     129     143     143     143     143     143     143     143     143     143     143     143     143     143     143     143     157     157     157     157     157     157     157     157     157     157     157     157     157     157     157     171     171     171     171     171     171     171     171     171     171     171     171     171     171     171     185     185     185     185     185     185     185     185     185     185     185     185     185     185     185     213     213     213     213     213     213     213     213     213     213     213     213     213     213     213;
+1.9899	2.2479	2.0094	2.0307	1.5913	1.9826	2.0471	2.3764	1.9215	2.0023	1.9416	1.8865	2.5243	2.1000	1.9223	2.1451	2.3351	2.1772	2.0645	1.8118	2.2131	2.2477	2.3292	1.9241	2.0625	2.1483	2.1337	2.5663	2.2875	2.094	2.1566	2.4823	2.2241	2.2704	1.8936	2.2753	2.2181	2.6139	2.0871	2.2235	2.2369	2.1342	2.4841	2.2815	2.3698	2.3732	2.514	2.3981	2.2804	2.0156	2.4398	2.4744	2.6132	2.3854	2.2659	2.4158	2.3802	2.7603	2.5021	2.3369	2.3681	2.4502	2.4387	2.4177	2.1955	2.5701	2.5455	2.6560	2.3167	2.5177	2.3985	2.3450	2.7343	2.6182	2.3913	2.3754	2.7093	2.5089	2.5099	2.3367	2.5119	2.5152	2.8389	2.4300	2.5036	2.6422	2.5623	2.7402	2.5389	2.5278	2.5700	2.6506	2.6672	2.5061	2.3838	2.6435	2.7337	2.8910	2.5886	2.5318	2.6846	2.5855	2.7639	2.7468	2.6093	2.5902	2.6633	2.6033	2.6886	2.3187	2.7099	2.7131	2.8546	2.6546	2.6780	2.6561	2.6166	2.9162	2.8357	2.5719	2.8335	2.9198	2.8390	2.7058	2.4600	3.0214	2.9503	3.0425	2.7784	2.7362	2.9410	2.7738	3.0318	2.7727	2.7149]';
+units.tL_control = {'d', 'cm'}; label.tL_control = {'time since birth', 'total length'}; bibkey.tL_control = 'misc';
+temp.tL_control = C2K(20);  units.temp.tL_control = 'K'; label.temp.tL_control = 'temperature';
+
 % t-Ww data
 % 3rd stage juveniles were kept individually to prevent cannibalism. Water temperature 22.8±1.5°C.
 % Animals were fed by freshly hatched, tapwater-rinsed brine shrimp (Artemia salina) nauplii ad libitum one time daily.
@@ -161,6 +168,12 @@ data.tWw15 = [ ... % time since birth (days), wet weight (g)
 units.tWw15 = {'d', 'g'}; label.tWw15 = {'time since birth', 'wet weight'}; bibkey.tWw15 = 'SeitVilp2005';
 temp.tWw15 = C2K(15);  units.temp.tWw15 = 'K'; label.temp.tWw15 = 'temperature';
 
+% t-Ww data for control group in pathogen infection experiment
+data.tWw_control = [ ... % time since birth (days), wet weight (g)
+87      87      87      87      87      87      87      87      87      87      87      87      87      87      87      101     101     101     101     101     101     101     101     101     101     101     101     101     101     101     115     115     115     115     115     115     115     115     115     115     115     115     115     115     115     129     129     129     129     129     129     129     129     129     129     129     129     129     129     129     143     143     143     143     143     143     143     143     143     143     143     143     143     143     143     157     157     157     157     157     157     157     157     157     157     157     157     157     157     157     171     171     171 	171     171     171     171     171     171     171     171     171     171     171     171     185     185     185     185     185     185     185     185     185     185     185     185     185     185     185     213     213     213     213     213     213     213     213     213     213     213     213     213     213     213;
+0.1303	0.1976	0.1352	0.1168	0.0736	0.1411	0.1396	0.2279	0.1167	0.1426	0.1310	0.1211	0.2690	0.1653	0.1238	0.1746	0.2093	0.1837	0.1503	0.1081	0.1838	0.1938	0.2395	0.1272	0.1565	0.1747	0.1649	0.2887	0.2146	0.1559	0.1781	0.2660	0.1778	0.1972	0.1154	0.1859	0.1970	0.2926	0.1617	0.1951	0.1857	0.1822	0.2804	0.2256	0.2173	0.2323	0.2782	0.2378	0.1978	0.1425	0.2508	0.2494	0.3094	0.2099	0.2032	0.2331	0.2116	0.3536	0.2778	0.2150	0.2333	0.2901	0.2578	0.2604	0.1741	0.2715	0.2705	0.3184	0.2229	0.2718	0.2350	0.2202	0.3507	0.2871	0.2222	0.2532	0.3363	0.2953	0.2823	0.2065	0.2725	0.2712	0.3921	0.2358	0.2608	0.3119	0.2818	0.3636	0.2896	0.2886	0.3079	0.3461	0.3166	0.2689	0.2158	0.3320	0.3347	0.3907	0.2832	0.2839	0.3169	0.2820	0.3569	0.3319	0.2775	0.2970	0.3307	0.3044	0.3386	0.2194	0.3263	0.3314	0.3949	0.2901	0.3305	0.3180	0.2941	0.4408	0.3569	0.2842	0.3698	0.4102	0.384	0.3439	0.2702	0.4115	0.4314	0.4875	0.3653	0.3384	0.4071	0.3545	0.4485	0.3678	0.3530]';
+units.tWw_control = {'d', 'g'}; label.tWw_control = {'time since birth', 'wet weight'}; bibkey.tWw_control = 'misc';
+temp.tWw_control = C2K(20);  units.temp.tWw_control = 'K'; label.temp.tWw_control = 'temperature';
 
 % length-weight
 data.LW_Vogt2010 = [ ... % total length (cm), wet weight (g)
@@ -228,6 +241,8 @@ weights.tWw20 = 3 * weights.tWw20;  % less weight to tricky temps, more weight t
 weights.tCL25 = 3 * weights.tCL25;  % less weight to tricky temps, more weight to optima
 weights.tWw25 = 3 * weights.tWw25;  % less weight to tricky temps, more weight to optima
 weights.Wwb = 5 * weights.Wwb;      % more weight to weight at birth
+weights.tL_control = 3 * weights.tL_control;  % less weight to tricky temps, more weight to optima
+weights.tWw_control = 3 * weights.tWw_control;  % less weight to tricky temps, more weight to optima
 
 %% set pseudodata and respective weights
 [data, units, label, weights] = addpseudodata(data, units, label, weights);

@@ -36,6 +36,7 @@ par.f = 1;            free.f     = 0;   units.f = '-';            label.f = 'sca
 par.f_Seit = 0.97643; free.f_Seit = 1;  units.f_Seit = '-';       label.f_Seit = 'scaled functional response for SeitVilp2005 data'; 
 par.f_tL1 = 1.5;      free.f_tL1 = 1;   units.f_tL1 = '-';        label.f_tL1 = 'scaled functional response for t-L data'; 
 par.f_tL2 = 0.59555;  free.f_tL2 = 1;   units.f_tL2 = '-';        label.f_tL2 = 'scaled functional response for t-L data, second part'; 
+par.f_cont = 0.4;       free.f_cont = 1;  units.f_cont = '-';       label.f_cont = 'scaled functional response for t-L and t-Ww data for control group in pathogen infection experiment'; 
 par.f_tW = 0.4715;    free.f_tW  = 1;   units.f_tW = '-';         label.f_tW = 'scaled functional response for t-Ww data'; 
 par.t_0 = 12.5026;    free.t_0   = 1;   units.t_0 = 'd';          label.t_0 = 'time at start development at T_ref'; 
 
